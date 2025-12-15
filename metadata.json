@@ -1,0 +1,5 @@
+{
+  "name": "Bento Note (方寸便签)",
+  "description": "一个融合 Bento 布局与 Spatial UI 的高效个人知识库，支持多主题与 Markdown。",
+  "requestFramePermissions": []
+}

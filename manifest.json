@@ -1,0 +1,21 @@
+{
+  "name": "Bento Note (方寸便签)",
+  "short_name": "方寸便签",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "安全、高效的个人知识库",
+  "icons": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/google-keep.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/google-keep.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

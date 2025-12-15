@@ -1,0 +1,112 @@
+
+/* @tailwind directives removed for preview stability */
+
+/* 2025 Design Trend: Global Noise Texture for "Tactile" Feel */
+.bg-noise {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+}
+
+/* Modern Spatial Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.1); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0, 0, 0, 0.2); }
+.dark-mode ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); }
+.dark-mode ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* Utilities */
+.clip-path-cyber {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+}
+.clip-path-slant {
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.strikethrough-anim {
+  background: linear-gradient(currentColor, currentColor) center no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.strikethrough-active {
+  background-size: 100% 1.5px;
+  opacity: 0.5;
+}
+
+.text-shadow-pixel {
+  text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+/* Mask fade utility */
+.mask-image-b-fade {
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+/* Markdown Preview Base Styles (for Note Cards) */
+.markdown-preview h1 { font-size: 1.4em; font-weight: 800; margin-bottom: 0.2em; letter-spacing: -0.02em; line-height: 1.2; }
+.markdown-preview h2 { font-size: 1.2em; font-weight: 700; margin-top: 0.5em; margin-bottom: 0.2em; letter-spacing: -0.01em; }
+.markdown-preview p { margin-bottom: 0.5em; line-height: 1.5; color: inherit; opacity: 0.9; }
+.markdown-preview ul { list-style-type: disc; padding-left: 1.2em; margin-bottom: 0.5em; opacity: 0.9; }
+.markdown-preview ol { list-style-type: decimal; padding-left: 1.2em; margin-bottom: 0.5em; opacity: 0.9; }
+.markdown-preview blockquote { border-left: 3px solid currentColor; padding-left: 1em; margin-bottom: 0.5em; opacity: 0.7; font-style: italic; }
+.markdown-preview code { font-family: monospace; padding: 0.1em 0.3em; border-radius: 4px; font-size: 0.9em; background: rgba(0,0,0,0.05); }
+
+/* Rich Text Preview Styles (HTML Content in Cards) */
+.rich-text-preview { font-size: 0.95em; line-height: 1.5; }
+.rich-text-preview h1, .rich-text-preview h2, .rich-text-preview h3 { font-weight: 700; margin-bottom: 0.2em; line-height: 1.2; }
+.rich-text-preview h1 { font-size: 1.4em; }
+.rich-text-preview h2 { font-size: 1.2em; }
+.rich-text-preview p { margin-bottom: 0.5em; }
+.rich-text-preview ul { list-style-type: disc; padding-left: 1.2em; margin-bottom: 0.5em; }
+.rich-text-preview ol { list-style-type: decimal; padding-left: 1.2em; margin-bottom: 0.5em; }
+.rich-text-preview blockquote { border-left: 3px solid rgba(156, 163, 175, 0.5); padding-left: 0.8em; margin: 0.5em 0; font-style: italic; color: #6b7280; }
+.rich-text-preview img { max-width: 100%; border-radius: 0.5rem; margin: 0.5em 0; object-fit: cover; max-height: 150px; }
+.rich-text-preview pre { background: #1e1e1e; color: #fff; padding: 0.5rem; border-radius: 0.5rem; overflow-x: auto; margin: 0.5em 0; font-size: 0.8em; font-family: monospace; }
+.dark-mode .rich-text-preview pre { background: #000; border: 1px solid #333; }
+
+/* React Calendar Elegant Overrides */
+.react-calendar { border: none !important; font-family: inherit !important; width: 100% !important; background: transparent !important; }
+.react-calendar__navigation { margin-bottom: 1rem; }
+.react-calendar__navigation button { min-width: 44px; background: none; font-size: 16px; font-weight: bold; border-radius: 8px; }
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus { background-color: rgba(0,0,0,0.05) !important; }
+
+/* Month/Year View */
+.react-calendar__month-view__weekdays { text-transform: uppercase; font-size: 0.75rem; font-weight: 700; opacity: 0.5; text-decoration: none !important; }
+.react-calendar__month-view__weekdays__weekday abbr { text-decoration: none; }
+
+/* Tiles */
+.react-calendar__tile { padding: 10px 6px; border-radius: 12px; font-weight: 500; transition: all 0.2s; position: relative; overflow: visible !important; }
+.react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus { background: rgba(0,0,0,0.05) !important; transform: scale(1.05); }
+
+/* Today */
+.react-calendar__tile--now { background: transparent !important; color: #3b82f6 !important; font-weight: 900; }
+.react-calendar__tile--now:after { content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background: #3b82f6; }
+
+/* Active (Selected) */
+.react-calendar__tile--active { background: #3b82f6 !important; color: white !important; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4); transform: scale(1.05); }
+.react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus { background: #2563eb !important; }
+.react-calendar__tile--active:after { display: none; }
+
+/* React Quill Overrides for Transparent Theme */
+.ql-toolbar { border-top: none !important; border-left: none !important; border-right: none !important; border-bottom: 1px solid rgba(0,0,0,0.1) !important; }
+.ql-container { border: none !important; font-family: inherit !important; font-size: inherit !important; }
+.ql-editor { padding: 1rem 0 !important; }
+
+/* --- DARK MODE CALENDAR FIXES --- */
+.dark-calendar .react-calendar__navigation button { color: #fff !important; }
+.dark-calendar .react-calendar__navigation button:enabled:hover { background-color: rgba(255,255,255,0.1) !important; }
+.dark-calendar .react-calendar__month-view__weekdays { color: rgba(255,255,255,0.6); }
+.dark-calendar .react-calendar__tile { color: rgba(255,255,255,0.8); }
+.dark-calendar .react-calendar__tile:enabled:hover { background-color: rgba(255,255,255,0.1) !important; color: #fff !important; }
+.dark-calendar .react-calendar__tile--now { color: #22d3ee !important; } /* Cyan for cyberpunk */
+.dark-calendar .react-calendar__tile--now:after { background: #22d3ee; }
+.dark-calendar .react-calendar__tile--active { background: #22d3ee !important; color: #000 !important; box-shadow: 0 0 10px rgba(34, 211, 238, 0.5); }
+.dark-calendar .react-calendar__tile--active:enabled:hover { background: #06b6d4 !important; }
